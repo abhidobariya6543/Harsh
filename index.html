@@ -1,173 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Harsh Vamaja 🎉</title>
+<title>Happy Birthday Harsh Vamaja 🤖</title>
 <style>
-html,body{
-  margin:0;padding:0;height:100%;
-  background:radial-gradient(circle at top,#1a0033,#000);
-  overflow:hidden;
-  font-family:'Poppins',sans-serif;
-  color:#fff;
-}
-canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;}
-h1{
-  position:absolute;
-  top:40%;left:50%;transform:translate(-50%,-50%);
-  font-size:clamp(2rem,6vw,5rem);
-  background:linear-gradient(90deg,#ff4ecd,#ffc857,#2dd4bf);
-  -webkit-background-clip:text;
-  color:transparent;
-  animation: glow 3s ease-in-out infinite;
-}
-@keyframes glow{
-  0%,100%{text-shadow:0 0 10px #ff4ecd,0 0 20px #ff4ecd;}
-  50%{text-shadow:0 0 20px #ffc857,0 0 40px #ffc857;}
-}
-#sub{
-  position:absolute;
-  top:52%;left:50%;transform:translateX(-50%);
-  font-size:clamp(1rem,3vw,1.5rem);
-  color:#e0e0e0;
-  animation: fadeIn 3s ease-in-out infinite alternate;
-}
-@keyframes fadeIn{from{opacity:.4;}to{opacity:1;}}
-button{
-  position:absolute;
-  bottom:40px;left:50%;transform:translateX(-50%);
-  background:linear-gradient(90deg,#ff9a9e,#fad0c4);
-  border:none;padding:12px 22px;
-  font-weight:700;font-size:1rem;
-  border-radius:30px;
-  cursor:pointer;color:#333;
-  box-shadow:0 0 15px rgba(255,255,255,0.3);
-}
-#cake{
-  position:absolute;left:50%;top:70%;transform:translateX(-50%);
-  width:140px;height:100px;
-}
-.layer{
-  position:absolute;left:0;width:100%;border-radius:10px;
-}
-.layer.bottom{bottom:0;height:40px;background:#8b2b3f;}
-.layer.top{bottom:35px;height:35px;background:#ffb3c1;}
-.candle{
-  position:absolute;width:10px;height:30px;
-  background:#fff;left:calc(50% - 5px);bottom:70px;border-radius:2px;
-}
-.flame{
-  position:absolute;top:-12px;left:50%;
-  width:12px;height:18px;transform:translateX(-50%);
-  border-radius:50%;
-  background:radial-gradient(circle at 35% 30%,#fff5d4 15%,#ffd54a 45%,#ff6f3c 75%,transparent 80%);
-  animation:flicker .9s infinite ease-in-out;
-}
-@keyframes flicker{
-  0%{transform:translateX(-50%) scale(1) rotate(-2deg);opacity:1;}
-  50%{transform:translateX(-50%) scale(0.8) rotate(2deg);opacity:.8;}
-  100%{transform:translateX(-50%) scale(1) rotate(-2deg);opacity:1;}
-}
-.gift{
-  position:absolute;
-  bottom:10%;left:50%;transform:translateX(-50%);
-  width:120px;height:90px;cursor:pointer;
-}
-.box{
-  width:100%;height:70px;background:linear-gradient(90deg,#ff7eb3,#ff758c);
-  border-radius:10px;position:absolute;bottom:0;
-}
-.lid{
-  width:100%;height:25px;background:#ffc857;
-  position:absolute;top:-5px;border-radius:6px;
-  animation:bounce 2s ease-in-out infinite;
-}
-@keyframes bounce{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-6px);}
-}
-.heart{
-  position:absolute;width:14px;height:14px;
-  background:#ff4ecd;transform:rotate(45deg);
-  animation:rise 3s ease-in infinite;
-}
-.heart:before,.heart:after{
-  content:'';position:absolute;width:14px;height:14px;
-  background:#ff4ecd;border-radius:50%;
-}
-.heart:before{top:-7px;left:0;}
-.heart:after{left:-7px;top:0;}
-@keyframes rise{
-  0%{opacity:1;transform:translateY(0) scale(1) rotate(45deg);}
-  100%{opacity:0;transform:translateY(-150px) scale(1.6) rotate(45deg);}
-}
+  html, body {
+    margin:0; padding:0; width:100%; height:100%;
+    overflow:hidden;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color:#fff;
+  }
+  h1 {
+    position:absolute;
+    top:10%;
+    left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+    font-size:clamp(2rem,6vw,5rem);
+    background: linear-gradient(90deg, #ff6ec7, #42d392);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+  }
+  #robots-container {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0; left:0;
+    overflow:hidden;
+  }
+  .robot {
+    position:absolute;
+    width:80px;
+    height:80px;
+    background:#fff;
+    border-radius:12px;
+    box-shadow: 0 0 15px rgba(0,255,255,0.5);
+    display:flex;align-items:center;justify-content:center;
+    font-size:2rem;
+    animation: float linear infinite;
+  }
+  @keyframes float {
+    0% {transform: translateY(0) translateX(0);}
+    50% {transform: translateY(-60px) translateX(20px);}
+    100% {transform: translateY(0) translateX(0);}
+  }
+  canvas {
+    position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none;
+  }
+  @media (max-width:600px){
+    .robot {width:50px; height:50px; font-size:1.5rem;}
+  }
 </style>
 </head>
 <body>
+
+<h1>Happy Birthday Harsh Vamaja 🤖</h1>
+
+<div id="robots-container"></div>
 <canvas id="confetti"></canvas>
-<h1>Happy Birthday<br>Harsh Vamaja 🎂</h1>
-<h1 id="sub">Wishing you love, laughter & endless joy 💖</h1>
-
-<div id="cake">
-  <div class="layer bottom"></div>
-  <div class="layer top"></div>
-  <div class="candle"><div class="flame"></div></div>
-</div>
-
-<div class="gift" id="gift">
-  <div class="box"></div>
-  <div class="lid"></div>
-</div>
-
-<button id="musicBtn">Play Music 🎵</button>
 
 <script>
+// --- Robots ---
+const container = document.getElementById('robots-container');
+const robotCount = 8;
+for(let i=0;i<robotCount;i++){
+  const robot = document.createElement('div');
+  robot.className='robot';
+  robot.textContent='🤖';
+  robot.style.left = Math.random()*90+'%';
+  robot.style.top = Math.random()*80+'%';
+  robot.style.animationDuration = 4 + Math.random()*3 + 's';
+  robot.style.animationDelay = Math.random()*2+'s';
+  container.appendChild(robot);
+}
+
 // --- Confetti ---
-const canvas=document.getElementById("confetti"),ctx=canvas.getContext("2d");
-let W,H,conf=[];
-function resize(){W=canvas.width=innerWidth;H=canvas.height=innerHeight;}
-window.addEventListener("resize",resize);resize();
-function Conf(){this.x=Math.random()*W;this.y=Math.random()*H;this.r=Math.random()*6+3;this.c=`hsl(${Math.random()*360},100%,70%)`;this.v=Math.random()*3+1;}
-for(let i=0;i<150;i++)conf.push(new Conf());
-function draw(){ctx.clearRect(0,0,W,H);for(let i=0;i<conf.length;i++){let p=conf[i];ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=p.c;ctx.fill();p.y+=p.v;if(p.y>H)p.y=-10;}}
-setInterval(draw,30);
+const canvas = document.getElementById('confetti');
+const ctx = canvas.getContext('2d');
+let W = canvas.width = window.innerWidth;
+let H = canvas.height = window.innerHeight;
+let confetti = [];
+const colors = ['#ff6ec7','#42d392','#ffa500','#ff42aa','#42f4ff'];
+function rand(min,max){return Math.random()*(max-min)+min;}
+function Confetto(){
+  this.x=rand(0,W);
+  this.y=rand(-H,0);
+  this.r=rand(4,10);
+  this.color=colors[Math.floor(Math.random()*colors.length)];
+  this.speed=rand(1,3);
+  this.angle=rand(0,Math.PI*2);
+  this.tilt=rand(-10,10);
+}
+Confetto.prototype.update=function(){
+  this.y+=this.speed;
+  this.x+=Math.sin(this.angle);
+  this.tilt=Math.sin(this.angle)*12;
+  this.angle+=0.02;
+  if(this.y>H) this.y=-10;
+}
+Confetto.prototype.draw=function(ctx){
+  ctx.beginPath();
+  ctx.fillStyle=this.color;
+  ctx.save();
+  ctx.translate(this.x,this.y);
+  ctx.rotate(this.angle/5);
+  ctx.fillRect(-this.r/2+this.tilt,-this.r/2,this.r,this.r*0.6);
+  ctx.restore();
+}
+for(let i=0;i<120;i++) confetti.push(new Confetto());
+function render(){
+  ctx.clearRect(0,0,W,H);
+  confetti.forEach(c=>{c.update();c.draw(ctx);});
+  requestAnimationFrame(render);
+}
+window.addEventListener('resize',()=>{W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;});
+render();
 
-// --- Hearts when gift clicked ---
-const gift=document.getElementById("gift");
-gift.addEventListener("click",()=>{
-  for(let i=0;i<10;i++){
-    let h=document.createElement("div");
-    h.className="heart";
-    h.style.left=(50+Math.random()*40-20)+"%";
-    h.style.bottom="15%";
-    h.style.animationDelay=(Math.random()*1)+"s";
-    document.body.appendChild(h);
-    setTimeout(()=>h.remove(),3000);
-  }
-});
-
-// --- Music ---
-let ctxAudio,playing=false;
-document.getElementById("musicBtn").addEventListener("click",()=>{
-  if(!playing){
-    ctxAudio=new (window.AudioContext||window.webkitAudioContext)();
-    const master=ctxAudio.createGain();master.gain.value=0.1;master.connect(ctxAudio.destination);
-    const notes=[392,392,440,392,523,494,392,392,440,392,587,523,392,392,784,659,523,494,440,698,698,659,523,587,523];
-    let t=ctxAudio.currentTime+0.1;
-    notes.forEach((f,i)=>{
-      const o=ctxAudio.createOscillator(),g=ctxAudio.createGain();
-      o.type='sine';o.frequency.value=f;g.gain.value=0;
-      o.connect(g);g.connect(master);
-      o.start(t);g.gain.linearRampToValueAtTime(0.1,t+0.02);
-      g.gain.linearRampToValueAtTime(0.0001,t+0.4);
-      o.stop(t+0.45);t+=0.45;
-    });
-    playing=true;
-    document.getElementById("musicBtn").innerText="Playing 🎶";
-    setTimeout(()=>{playing=false;document.getElementById("musicBtn").innerText="Play Music 🎵";},t*1000);
-  }
-});
 </script>
 </body>
 </html>
